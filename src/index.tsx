@@ -17,7 +17,7 @@ const LiveActivity_ = NativeModules.LiveActivity
       }
     );
 
-export class LiveActivity<T extends unknown> {
+export default class LiveActivity<T extends unknown> {
   startActivity(data: T): Promise<string | null> {
     const dataString = JSON.stringify(data);
     return LiveActivity_.startActivity(dataString);
