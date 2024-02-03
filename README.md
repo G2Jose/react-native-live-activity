@@ -28,7 +28,7 @@ type LiveActivityParams = {
 
 const liveActivity = new LiveActivity<LiveActivityParams>()
 
-await liveActivity.startActivity({
+const activity = await liveActivity.startActivity({
   status: "Packing",
   driveName: "John",
   expectedDeliveryTime: "12 PM"
